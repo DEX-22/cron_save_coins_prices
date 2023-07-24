@@ -1,12 +1,10 @@
 # !/bin/bash
 
-cd /home/dex/dev/ruby-file-system/db
+cd ./db
 
 file="$(date '+%Y-%m-%d %H:%M:%S')"
 
-path_to=./bkp/"$file".json
-
-# echo "$path_to"
+path_to=./bkp/"$file".json 
 
 mv ./db.json "$path_to"
 

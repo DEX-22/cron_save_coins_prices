@@ -1,5 +1,3 @@
-# !/bin/bash
-
-cd ~/dev/ruby-file-system
+# !/bin/bash 
 
 "$(which ruby)" ./index.rb
