@@ -19,7 +19,7 @@ class DataService
         return response['bitcoin']
         
     end
-    def fetchSolesInVariousPricesNow
+    def fetchDolaresInVariousPricesNow
  
         url = URI("https://api.exchangerate-api.com/v4/latest/PEN")
 

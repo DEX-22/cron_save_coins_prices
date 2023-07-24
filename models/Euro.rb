@@ -7,7 +7,7 @@ class Euro < Moneda
     def initialize 
         service = DataService.new 
         
-        price = 1/service.fetchSolesInVariousPricesNow['EUR']
+        price = 1/service.fetchDolaresInVariousPricesNow['EUR']
         price = price.floor(3)
         date = DateTime.now()
     

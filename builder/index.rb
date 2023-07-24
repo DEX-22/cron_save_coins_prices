@@ -1,7 +1,7 @@
 
 require_relative('../models/Bitcoin.rb')
 require_relative('../models/Euro.rb')
-require_relative('../models/Sol.rb')
+require_relative('../models/Dolar.rb')
 require_relative('../db/config/index.rb')
 
 
@@ -24,10 +24,10 @@ class DataBuilder
     
         return all       
     end
-    def createSolesData(all)
+    def createDolaresData(all)
   
-        sol = Sol.new 
-        price = sol.getPrice() 
+        dolar = Dolar.new 
+        price = dolar.getPrice() 
         
         if all.length > 0
             last = all.last
@@ -38,7 +38,7 @@ class DataBuilder
         end
         solHash = {
             "price"=> price.floor(3),
-            "date"=> sol.getDate()
+            "date"=> dolar.getDate()
         } 
         all.push(solHash)   
 

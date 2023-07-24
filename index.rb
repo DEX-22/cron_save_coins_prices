@@ -2,33 +2,33 @@ require_relative('./builder/index.rb')
 require_relative('./db/config/index.rb')
 
 config = Config.new
-config.setDbInfo(['bitcoins','soles','euros'])
+config.setDbInfo(['bitcoins','dolares','euros'])
  
 
 bitcoins = config.getInfo['bitcoins'] || [] 
-soles = config.getInfo['soles'] || [] 
+dolares = config.getInfo['dolares'] || [] 
 euros = config.getInfo['euros'] || []
 
 counters = {
     "bitcoins" => bitcoins.length,
-    "soles" => soles.length,
+    "dolares" => dolares.length,
     "euros" => euros.length    
     }  
 dataBuilder = DataBuilder.new
 
 bitcoins = dataBuilder.createBitcoinData(bitcoins)
-soles = dataBuilder.createSolesData(soles)
+dolares = dataBuilder.createDolaresData(dolares)
 euros = dataBuilder.createEurosData(euros)
 
 if counters['bitcoins'] < bitcoins.length
     config.updateDbInfo('bitcoins',bitcoins)
 end
 
-if counters['soles'] < soles.length 
-    config.updateDbInfo('soles',soles)
+if counters['dolares'] < dolares.length 
+    config.updateDbInfo('dolares',dolares)
 end
  
-if counters['euros'] < soles.length 
+if counters['euros'] < dolares.length 
     config.updateDbInfo('euros',euros)
 end
 
