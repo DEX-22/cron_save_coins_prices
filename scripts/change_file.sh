@@ -2,10 +2,14 @@
 
 cd /home/dex/dev/ruby-file-system/db
 
-mv ./db.json ./bkp/"$(date '+%Y-%m-%d %H:%M:%S')".json
+path_to=./bkp/"$(date '+%Y-%m-%d %H:%M:%S')".json
 
-# cat > db.json
+cat > "$path_to"
 
-cp ./bkp/db-bkp.json ./db.json
+cp ./db.json "$path_to"
 
-chmod 777 db.json
+
+
+# cp ./bkp/db-bkp.json ./db.json
+
+# chmod 777 db.json
