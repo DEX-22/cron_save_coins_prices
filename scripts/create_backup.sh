@@ -1,6 +1,7 @@
 # !/bin/bash
+here = "$(pwd)"
 
-cd ./db
+cd "${here}"/db
 
 file="$(date '+%Y-%m-%d %H:%M:%S')"
 
